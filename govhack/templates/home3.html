@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/TimeCircles.css" />
+    <style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+</style>
+    <script src="style/TimeCircles.js"></script>
+
+    <title>Test </title>
+    <style>
+ #demo{
+  color: white;
+  font-size: 30px;
+  margin-right: 60px;
+}
+</style>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" >Gov TechThon</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" >Test <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+    <div class="container my-4 col-lg-8 m-auto d-block">
+     <h2 class="text-center text-primary">Welcome  </h2>
+     <div class="container my-4">
+       <div class="col-lg-8 m-auto d-block">
+     <div class="card">
+       <h3 class="text-center card-header">You have to select only one out of four. Best of luck.</h3>
+     </div>
+     <form action="result" method="post">
+         {% csrf_token %}
+         <div class='card'>
+        <h5 class='card-header'>Qno. 1 Who is the Prime Minister of India? </h5>
+        <div class='card-body'>
+        <div class='form-check'>
+        <input class='form-check-input' type='radio' name='op1' id='op1' value='1'>
+        <label class='form-check-label' for='gridRadios1'>Amit Shah</label><br>
+        </div>
+        <div class='form-check'>
+          <input class='form-check-input' type='radio' name='op1' id='op1' value='2'>
+          <label class='form-check-label' for='gridRadios2'>"Rahul Gandhi"</label><br>
+        </div>
+          <div class='form-check'>
+            <input class='form-check-input' type='radio' name='op1' id='op1' value='3'>
+            <label class='form-check-label' for='gridRadios2'>Narendra Modi</label><br>
+        </div>
+            <div class='form-check'>
+              <input class='form-check-input' type='radio' name='op1' id='op1' value='4'>
+              <label class='form-check-label' for='gridRadios2'>Sonia Gandhi</label><br></div>
+
+        </div>
+        </div>
+         <div class='card'>
+        <h5 class='card-header'>Qno. 2 Who is the President of India? </h5>
+        <div class='card-body'>
+        <div class='form-check'>
+        <input class='form-check-input' type='radio' name='op2' id='op2' value='1'>
+        <label class='form-check-label' for='gridRadios1'>Pranab Mukherjee</label><br>
+        </div>
+        <div class='form-check'>
+          <input class='form-check-input' type='radio' name='op2' id='op2' value='2'>
+          <label class='form-check-label' for='gridRadios2'>"Rahul Gandhi"</label><br>
+        </div>
+          <div class='form-check'>
+            <input class='form-check-input' type='radio' name='op2' id='op2' value='3'>
+            <label class='form-check-label' for='gridRadios2'>Ram nath Kovind</label><br>
+        </div>
+            <div class='form-check'>
+              <input class='form-check-input' type='radio' name='op2' id='op2' value='4'>
+              <label class='form-check-label' for='gridRadios2'>Pratibha patil</label><br></div>
+
+        </div>
+        </div>
+         <div class='card'>
+        <h5 class='card-header'>Qno. 3 Who is the national animal of India? </h5>
+        <div class='card-body'>
+        <div class='form-check'>
+        <input class='form-check-input' type='radio' name='op3' id='op3' value='1'>
+        <label class='form-check-label' for='gridRadios1'>Lion</label><br>
+        </div>
+        <div class='form-check'>
+          <input class='form-check-input' type='radio' name='op3' id='op3' value='2'>
+          <label class='form-check-label' for='gridRadios2'>Peacock</label><br>
+        </div>
+          <div class='form-check'>
+            <input class='form-check-input' type='radio' name='op3' id='op3' value='3'>
+            <label class='form-check-label' for='gridRadios2'>Elephant</label><br>
+        </div>
+            <div class='form-check'>
+              <input class='form-check-input' type='radio' name='op3' id='op3' value='4'>
+              <label class='form-check-label' for='gridRadios2'>Tiger</label><br></div>
+
+        </div>
+        </div>
+         <div class='card'>
+        <h5 class='card-header'>Qno. 4 What is the national game of India? </h5>
+        <div class='card-body'>
+        <div class='form-check'>
+        <input class='form-check-input' type='radio' name='op4' id='op4' value='1'>
+        <label class='form-check-label' for='gridRadios1'>Cricket</label><br>
+        </div>
+        <div class='form-check'>
+          <input class='form-check-input' type='radio' name='op4' id='op4' value='2'>
+          <label class='form-check-label' for='gridRadios2'>Hockey</label><br>
+        </div>
+          <div class='form-check'>
+            <input class='form-check-input' type='radio' name='op4' id='op4' value='3'>
+            <label class='form-check-label' for='gridRadios2'>Football</label><br>
+        </div>
+            <div class='form-check'>
+              <input class='form-check-input' type='radio' name='op4' id='op4' value='4'>
+              <label class='form-check-label' for='gridRadios2'>Badminton</label><br></div>
+
+        </div>
+        </div>
+         <div class='card'>
+        <h5 class='card-header'>Qno. 5 Who invented bulb? </h5>
+        <div class='card-body'>
+        <div class='form-check'>
+        <input class='form-check-input' type='radio' name='op5' id='op5' value='1'>
+        <label class='form-check-label' for='gridRadios1'>Thomas Edision</label><br>
+        </div>
+        <div class='form-check'>
+          <input class='form-check-input' type='radio' name='op5' id='op5' value='2'>
+          <label class='form-check-label' for='gridRadios2'>Joseph Swan</label><br>
+        </div>
+          <div class='form-check'>
+            <input class='form-check-input' type='radio' name='op5' id='op5' value='3'>
+            <label class='form-check-label' for='gridRadios2'>Albert Eninstein</label><br>
+        </div>
+            <div class='form-check'>
+              <input class='form-check-input' type='radio' name='op5' id='op5' value='4'>
+              <label class='form-check-label' for='gridRadios2'>Mathew Evans</label><br></div>
+
+        </div>
+        </div>
+     <br><br>
+     <button type="submit" class="btn btn-primary">Submit</button>
+     </form>
+    </div>
+     </div>
+    </div>
+    <div class="footer"> <p> @copyrights 2020</p> </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
